@@ -15,18 +15,14 @@ initial begin
     $dumpfile("test_tb.vcd");
     $dumpvars(0, sdbcd_tb);
 
-    CLK = 0;
+    CLK = 1;
+    CLR = 1;
     ENABLE = 1;
     LOAD = 0;
     UP = 0;
     D = 4'h9;
 
-    // reset / initialize
-    CLR = 0;
-    #20;
-
     // decrement
-    CLR = 1; 
     CLK = 1;
     #20;
     CLK = 0;
@@ -57,6 +53,10 @@ initial begin
     CLK = 1; 
     #20;
     CLK = 0; 
+    #20;
+
+    // clear
+    CLR = 0;
     #20;
     
     $display("test complete");
