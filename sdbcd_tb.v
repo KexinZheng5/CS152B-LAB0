@@ -34,6 +34,30 @@ initial begin
     CLK = 0;
     #20;
 
+    // decrement
+    CLK = 1;
+    #20;
+    CLK = 0;
+    #20;
+
+    // decrement
+    CLK = 1;
+    #20;
+    CLK = 0;
+    #20;
+
+    // decrement
+    CLK = 1;
+    #20;
+    CLK = 0;
+    #20;
+
+    // decrement
+    CLK = 1;
+    #20;
+    CLK = 0;
+    #20;
+
     // load
     LOAD = 1;
     CLK = 1;
@@ -44,6 +68,30 @@ initial begin
 
     // increment
     UP = 1;
+    CLK = 1; 
+    #20;
+    CLK = 0; 
+    #20;
+
+    // increment
+    CLK = 1; 
+    #20;
+    CLK = 0; 
+    #20;
+
+    // increment
+    CLK = 1; 
+    #20;
+    CLK = 0; 
+    #20;
+
+    // increment
+    CLK = 1; 
+    #20;
+    CLK = 0; 
+    #20;
+
+    // increment
     CLK = 1; 
     #20;
     CLK = 0; 
