@@ -9,6 +9,8 @@ module BCD_divisible_by_11 (D, Q);
     wire c1, c2, c3, c4, c5; // carry
 
     wire [5:0] sum1, sum2, sum3; // sums
+    wire mult1, mult2, mult3; 
+    wire [4:0] negation;
 
     // load each digit as a 6 digit binary number
     assign a = {2'b00, D[15:12]};
@@ -37,7 +39,20 @@ module BCD_divisible_by_11 (D, Q);
     six_digit_adder add3 (sum1, c, c4, sum2);
     six_digit_adder add4 (sum2, d3, c5, sum3);
 
-    // set output to true if all bits in sum3 are zero
-    nor(Q, sum3[0], sum3[1], sum3[2], sum3[3], sum3[4], sum3[5]);
+    // true if all bits in sum3 are zero
+    nor(mult1, sum3[0], sum3[1], sum3[2], sum3[3], sum3[4], sum3[5]);
 
+    // true if sum is 11
+    not(negation[0], sum3[5]);
+    not(negation[1], sum3[4]);
+    not(negation[2], sum3[2]);
+    and(mult2, sum3[0], sum3[1], negation[2], sum3[3], negation[1], negation[0]);
+
+    // true if sum is -11
+    not(negation[3], sum3[3]);
+    not(negation[4], sum3[1]);
+    and(mult3, sum3[0], negation[4], sum3[2], negation[3], sum3[4], sum3[5]);
+
+    // Q is true if sum is equal to either 0, 11, or -11
+    or(Q, mult1, mult2, mult3);
 endmodule

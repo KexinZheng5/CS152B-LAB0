@@ -65,7 +65,19 @@ initial begin
     // divisible
     D = 16'h9119;
     #20;
-   
+
+    // divisible
+    D = 16'h9240;
+    #20;
+
+    // divisible
+    D = 16'h8272;
+    #20;
+
+    // divisible
+    D = 16'h0704;
+    #20;
+
     $display("test complete");
 
 end
