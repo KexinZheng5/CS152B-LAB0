@@ -55,6 +55,14 @@ initial begin
     #20;
 
     // divisible
+    D = 16'h0000;
+    #20;
+
+        // divisible
+    D = 16'h9999;
+    #20;
+
+    // divisible
     D = 16'h9119;
     #20;
    
