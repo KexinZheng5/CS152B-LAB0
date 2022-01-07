@@ -87,7 +87,7 @@ module BCD_divisible_by_3(D, Q);
 		// multiples of 3 between 0 and 36:
 		// 0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36
 		
-		result = (sum_final == 6'b000000) || (sum_final == 6'b000011) || (sum_final == 6'b000110) || (sum_final == 6'b001001) || (sum_final == 6'b001100) || (sum_final == 6'b001111) || (sum_final == 6'b010010) || (sum_final == 6'b010101) || (sum_final == 6'b000000) || (sum_final == 6'b011000) || (sum_final == 6'b011011) || (sum_final == 6'b011110) || (sum_final == 6'b100001) || (sum_final == 6'b100100);
+		result = (sum_final == 6'b000000) || (sum_final == 6'b000011) || (sum_final == 6'b000110) || (sum_final == 6'b001001) || (sum_final == 6'b001100) || (sum_final == 6'b001111) || (sum_final == 6'b010010) || (sum_final == 6'b010101) ||  (sum_final == 6'b011000) || (sum_final == 6'b011011) || (sum_final == 6'b011110) || (sum_final == 6'b100001) || (sum_final == 6'b100100);
 		
 	end
 	
