@@ -17,6 +17,12 @@ initial begin
 
     CLK = 1;
     CLR = 1;
+    #5
+
+    CLR = 0;
+    #5
+
+    CLR = 1;
     ENABLE = 1;
     LOAD = 0;
     UP = 0;

@@ -1,4 +1,7 @@
-module BCD_division_by_3_tb;
+`timescale 1ns / 1ns
+`include "BCD_divisible_by_3.v"
+
+module BCD_divisible_by_3_tb;
 
 	// Inputs
 	reg [15:0] D;
@@ -14,6 +17,9 @@ module BCD_division_by_3_tb;
 	
 
 	initial begin
+		$dumpfile("test_tb_2.vcd");
+    	$dumpvars(0, BCD_divisible_by_3_tb);
+
 		// Initialize Inputs
 		D = 0;
 

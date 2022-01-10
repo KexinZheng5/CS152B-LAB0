@@ -5,12 +5,6 @@ module single_digit_BCD (CLK, ENABLE, LOAD, UP, CLR, D, Q, CO);
     output reg [3:0] Q; // output Q
     output reg CO; // carry out
 
-    // initialize
-    initial begin
-        Q = 4'b0; 
-        CO = 0;
-    end
-
     // changing states
     always @ (posedge CLK or CLR) begin
 

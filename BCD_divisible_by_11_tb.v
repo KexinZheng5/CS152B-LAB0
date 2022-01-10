@@ -10,7 +10,7 @@ BCD_divisible_by_11 uut(D, Q);
 
 initial begin
     
-    $dumpfile("test_tb.vcd");
+    $dumpfile("test_tb_3.vcd");
     $dumpvars(0, BCD_divisible_by_11_tb);
 
     // not divisible
